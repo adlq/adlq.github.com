@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div id="post">
+  {% if page.link %}
+    <h2><a href={{ page.link }} target="blank">{{ page.title }}</a> &#8594;</h2>
+  {% else %}
+    <h2><a href={{ page.url }}>{{ page.title }}</a></h2>
+  {% endif %}
+  <p>
+    <span class="post_date">{{ post.date | date: "%d %B %Y" }}</span></br>
+    {{ content }}
+  </p>
+</div>
